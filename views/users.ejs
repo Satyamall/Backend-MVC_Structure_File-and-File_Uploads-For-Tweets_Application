@@ -1,0 +1,17 @@
+
+
+<html lang="en">
+    <body style="display: flex; align-items: center; justify-content: center; flex-direction: column">
+        <h1>All Users List</h1>
+        <h3>User Details</h3>
+        <% users.forEach( user => {%>
+          <div style="border: 2px solid red; margin: 10px; padding: 10px; width: 500px; display:flex; align-items: center; flex-direction: column; background-color: gray; color: white">
+              <img width= "60px" src="../Satya.png"/>
+              <h2>User ID: <%= user._id %></h2>
+              <h2>UserName: <%= user.username %></h2>
+              <p>Email: <%= user.email %></p>
+              <a href="/users/<%=user._id %>">User Details</a>
+          </div>
+       <% }) %>
+    </body>
+ </html>

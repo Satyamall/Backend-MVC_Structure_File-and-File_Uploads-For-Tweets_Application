@@ -1,0 +1,17 @@
+
+
+<html lang="en">
+    <body style="display: flex; align-items: center; justify-content: center; flex-direction: column">
+        <h1>Tweeter Application</h1>
+        <h3>List of All Tweets Below</h3>
+        <% tweets.forEach( tweet => { %>
+            <div style="border: 2px solid red; margin: 10px; width: 500px; display:flex; align-items: center; flex-direction: column; background-color: black; color: white">
+                <h2>Tweet ID: <%= tweet._id %></h2>
+                <h2>User ID: <%= tweet.user_id %></h2>
+                <h2>Title: <%= tweet.title %></h2>
+                <p>Body: <%= tweet.body %></p>
+                <p>Tags: <%= tweet.tags %></p>
+            </div>
+        <% }) %>
+    </body>
+</html>
